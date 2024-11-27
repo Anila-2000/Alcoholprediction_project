@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #8A2BE2;
+             
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url('https://img.freepik.com/free-photo/refreshing-mojito-cocktails-with-lime-slices-generative-ai_188544-12369.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            text-align: center;
+        }
+        .result {
+            font-size: 1.5em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result">
+            <p>The predicted total alcohol consumption is: {{ prediction }} servings.</p>
+        </div>
+    </div>
+</body>
+</html>

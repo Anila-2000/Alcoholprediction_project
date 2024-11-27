@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcohol Consumption Predictor</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background-color: #8A2BE2;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-image: url('https://img.freepik.com/free-photo/refreshing-mojito-cocktails-with-lime-slices-generative-ai_188544-12369.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 400px; /* Set a height for testing */
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input[type="number"],
+        input[type="submit"],
+        select {
+            padding: 10px;
+            margin-bottom: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Alcohol Consumption Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="beer_servings">Beer Servings:</label>
+            <input type="number" id="beer_servings" name="beer_servings" step="0.1" required>
+
+            <label for="spirit_servings">Spirit Servings:</label>
+            <input type="number" id="spirit_servings" name="spirit_servings" step="0.1" required>
+
+            <label for="wine_servings">Wine Servings:</label>
+            <input type="number" id="wine_servings" name="wine_servings" step="0.1" required>
+
+            <label for="continent">Continent:</label>
+            <select id="continent" name="continent" required>
+                <option value="Europe">Europe</option>
+                <option value="Asia">Asia</option>
+                <option value="North America">North America</option>
+                <option value="South America">South America</option>
+                <option value="Africa">Africa</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+
+            <input type="submit" value="Predict Consumption">
+        </form>
+    </div>
+</body>
+</html>
